@@ -9,13 +9,13 @@ public class Test {
 	private int z=0;
 	private int temp=0;
 	Random rand = new Random();
-	private int[] testArray=new int[7];
+	private int[] testArray=new int[14];
 	
 	/*creates a new array size 16 with random numbers*/
 	public Test() {
 		
 		while(testArray[testArray.length-1]==0) {
-			temp = rand.nextInt(10)+1;
+			temp = rand.nextInt(100)+1;
 			if(!contains(testArray,temp)) {
 				testArray[x]=temp;
 				x++;
@@ -37,31 +37,40 @@ public class Test {
 	
 	/*print the array to see the results*/
 	public static void testPrint(int[]arr) {
-		for(int i=0;i<arr.length;i++)
+		for(int i=0;i<arr.length-1;i++) {
 			System.out.print(arr[i]+",");
-			
+		}
+		System.out.print(arr[arr.length-1]);
 	}
 	
 	/*The main activity. It calls HeapSort*/
 	public static void main (String[]args) {
-		//add block comment: ctrl+shift+/, remove: ctrl+shift+\
+		//add block comment: ctrl+shift+/, 
+		//remove: ctrl+shift+\
 		Test test=new Test();
 		System.out.print("Original Array is:\n");
 		testPrint(test.testArray);
 		System.out.print("\n");
-		HeapSort heap=new HeapSort();
+		//-----Call sorting algorithms here:-----
+		/*HeapSort heap=new HeapSort();
 		heap.sort(test.testArray);
-		System.out.print("HeapSort:\n");
+		System.out.print("HeapSort:\n");*/
+		InsertionSort s = new InsertionSort();
+		s.insertionSort(test.testArray);
+		
+		//-----End calling sorting algorithms-----
+		
+		System.out.println("After sort: ");
 		test.testPrint(test.testArray);
 		System.out.print("\n");
 		
-		Test test2=new Test();
+		/*Test test2=new Test();
 		System.out.print("Original Array is:\n");
 		test2.testPrint(test2.testArray);
 		SelectionSort selection=new SelectionSort();
 		selection.selectionSort(test2.testArray);
 		System.out.print("\nSelectionSort:\n");
-		test2.testPrint(test2.testArray);
+		test2.testPrint(test2.testArray);*/
 		
 		
 		

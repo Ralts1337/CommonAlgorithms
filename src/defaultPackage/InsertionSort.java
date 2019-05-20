@@ -2,20 +2,26 @@ package defaultPackage;
 
 public class InsertionSort {
 	public static void insertionSort(int[] arr) {
-		int length=arr.length;
-		/* Counter starts at arr[1] and traverses through
-		 * the array. The algorithm considers the array 
-		 * position before the counter as sorted. Then it
-		 * compares the next position with the sorted part
-		 * and insert it into its proper place*/
-		for(int counter=1;counter<length;counter++) {
-			int j=counter-1;		//
-			//put element@counter to its proper position
-			while(j>=0 && arr[j]>=arr[j+1]) {
-				swap(arr,j,j+1);
-				//swap j and counter
-				j=j-1; //check the previous position
+		/*
+		i ← 1
+		while i < length(A)
+			j ← i
+				while j > 0 and A[j-1] > A[j]
+					swap A[j] and A[j-1]
+					j ← j - 1
+				end while
+			i ← i + 1
+		end while
+		 */
+		int n = arr.length;
+		int i = 1;
+		while(i<n) {
+			int j = i;
+			while(j>0 && arr[j-1]>arr[j]) {
+				swap(arr,j,j-1);
+				j--;
 			}
+			i++;
 		}
 		
 		
@@ -27,13 +33,7 @@ public class InsertionSort {
 		arr[b]=temp;
 	}
 
-	public static void main(String[]args) {
-		int[] arr = {8,8,7,6,5,4,3,2,1};
-		insertionSort(arr);
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i]+",");
-		}
-	}
+	
 	
 }
 

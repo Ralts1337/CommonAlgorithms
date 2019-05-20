@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author Adam
- *
- */
-package sortingAlgorithms;
