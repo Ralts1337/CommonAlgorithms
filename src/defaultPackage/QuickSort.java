@@ -1,6 +1,9 @@
 package defaultPackage;
 
 public class QuickSort {
+	//Initial parameters:
+	//low: 0
+	//high: arr.length-1  (position of last element of array)
 	
 	 static void quickSort(int arr[], int low, int high) 
 	    { 
@@ -12,9 +15,9 @@ public class QuickSort {
 	            quickSort(arr, low, p-1); 			
 	            quickSort(arr, p+1, high);			
 	        } 
-	        
+	        //stops if there's only 1 element
 	    } 
- 
+	 
 	public static int partition(int[] arr, int low, int high) 
     { 
         int pivot = arr[(low+high)/2]; 	//pivot = middle element

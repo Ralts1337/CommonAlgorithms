@@ -1,6 +1,9 @@
 package defaultPackage;
 
 public class InsertionSort {
+	/*
+	 * https://en.wikipedia.org/wiki/Insertion_sort
+	 */
 	public static void insertionSort(int[] arr) {
 		/*
 		i ← 1

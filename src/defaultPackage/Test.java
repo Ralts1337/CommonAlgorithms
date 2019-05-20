@@ -55,8 +55,12 @@ public class Test {
 		/*HeapSort heap=new HeapSort();
 		heap.sort(test.testArray);
 		System.out.print("HeapSort:\n");*/
-		InsertionSort s = new InsertionSort();
-		s.insertionSort(test.testArray);
+		
+		/*InsertionSort s = new InsertionSort();
+		s.insertionSort(test.testArray);*/
+		QuickSort q = new QuickSort();
+		q.quickSort(test.testArray, 0, test.testArray.length-1);
+		
 		
 		//-----End calling sorting algorithms-----
 		
