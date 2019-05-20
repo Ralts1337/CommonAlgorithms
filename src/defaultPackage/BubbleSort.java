@@ -1,4 +1,4 @@
-package sortingAlgorithms;
+package defaultPackage;
 
 public class BubbleSort {
 /*Bubble sort checks if the neighbor element is in order. If not, switch them.

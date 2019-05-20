@@ -1,11 +1,12 @@
 /**
  * 
  */
-package sortingAlgorithms;
+package defaultPackage;
 
 /**
  * @author Adam Xu
  * An improvement to insertion and bubble sort
+ * 
  */
 public class ShellSort {
 
